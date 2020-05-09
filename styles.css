@@ -37,10 +37,10 @@ video {
 
 #progress {
     
-    background-color: white;
-    height: 10px
 }
 
 #progress-filled {
-
+    background-color: #ffc600;
+    height: 5px;
+    width: 0%;
 }
