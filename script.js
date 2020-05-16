@@ -24,15 +24,12 @@ function setup() {
 }
 
 function handleSkipButton(event) {
-    if (event.target.id == "backward-30") {
-        video.currentTime -= 30
-    } else if (event.target.id == "backward-10") {
-        video.currentTime -= 10
-    } else if (event.target.id == "forward-10") {
-        video.currentTime += 10
-    } else if (event.target.id == "forward-30") {
-        video.currentTime += 30
-    }
+    console.log(event.target)
+    let timeChange = event.target.data.time
+    video.currentTime += timeChange
+
+    // Math.floor(video.currentTime / 60)
+    // video.currentTime % 60
 }
 
 function pauseVideo() {
