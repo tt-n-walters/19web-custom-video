@@ -3,6 +3,7 @@ let playButton
 let audioSlider
 let skipButtons
 let progressBar
+let speedSlider
 
 function setup() {
     video = document.querySelector("#player > video")
@@ -10,6 +11,7 @@ function setup() {
     audioSlider = document.getElementById("volume")
     skipButtons = document.querySelectorAll(".skip")
     progressBar = document.getElementById("progress-filled")
+    speedSlider = document.getElementById("speed")
 
     window.addEventListener("keypress", handleKeypress)
     playButton.addEventListener("click", handlePlayClick)
@@ -18,6 +20,7 @@ function setup() {
         skip.addEventListener("click", handleSkipButton)
     }
     video.addEventListener("timeupdate", handleVideoProgress)
+    speedSlider.addEventListener("change", handleSpeedChange)
 }
 
 function handleSkipButton(event) {
@@ -48,6 +51,11 @@ function handleVideoProgress(event) {
 function handleAudioChange(event) {
     let newVolume = event.target.valueAsNumber / 100
     video.volume = newVolume
+}
+
+function handleSpeedChange(event) {
+    let newSpeed = event.target.valueAsNumber / 100
+    video.playbackRate = newSpeed
 }
 
 function handleKeypress(event) {
