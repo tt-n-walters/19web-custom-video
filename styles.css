@@ -44,3 +44,7 @@ video {
     height: 5px;
     width: 0%;
 }
+
+input[type=range] {
+    width: 100px !important;
+}
