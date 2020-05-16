@@ -37,10 +37,12 @@ function handleSkipButton(event) {
 
 function pauseVideo() {
     video.pause()
+    playButton.innerText = "Play"
 }
 
 function playVideo() {
     video.play()
+    playButton.innerText = "Pause"
 }
 
 function handleVideoProgress(event) {
