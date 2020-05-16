@@ -24,12 +24,8 @@ function setup() {
 }
 
 function handleSkipButton(event) {
-    console.log(event.target)
-    let timeChange = event.target.data.time
+    let timeChange = Number.parseInt(event.target.dataset.time)
     video.currentTime += timeChange
-
-    // Math.floor(video.currentTime / 60)
-    // video.currentTime % 60
 }
 
 function pauseVideo() {
