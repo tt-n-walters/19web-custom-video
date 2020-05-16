@@ -55,7 +55,7 @@ function handleAudioChange(event) {
 
 function handleSpeedChange(event) {
     let newSpeed = event.target.valueAsNumber / 100
-    video.playbackRate = newSpeed
+    video.playbackRate = newSpeed * 2
 }
 
 function handleKeypress(event) {
